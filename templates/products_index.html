@@ -3,4 +3,7 @@
 
 {% block content %}
     Hello World
+    {% for nail_polish in nail_polishes %}
+        <h2>{{ nail_polish.brand}}</h2>
+    {% endfor %}
 {% endblock %}
