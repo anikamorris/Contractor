@@ -1,0 +1,21 @@
+<!-- templates/products_show.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+    <a href='/'>Back</a>
+    
+    <div class='image'>
+        <img src={{nail_polish.image_link}} class="img-fluid" alt="Responsive image">
+    </div>
+    <h2>{{ nail_polish.name }}</h2>
+    <h2>{{ nail_polish.brand }}</h2>
+    <small>{{ nail_polish.description }}</small>
+    
+    {% for color in nail_polish.product_colors %}
+        <div class="input-color">
+            <input type="text" value={{color.hex_value}}/>
+        </div>
+        {{ color.colour_name }}
+    {% endfor %}
+
+{% endblock %}

@@ -1,9 +1,10 @@
-<!-- templates/playlists_index.html -->
+<!-- templates/products_index.html -->
 {% extends 'base.html' %}
 
 {% block content %}
-    Hello World
+
     {% for nail_polish in nail_polishes %}
-        <h2>{{ nail_polish.brand}}</h2>
+        <h2><a href="products/{{ nail_polish._id }}">{{ nail_polish.name}}</a></h2>
     {% endfor %}
+
 {% endblock %}
