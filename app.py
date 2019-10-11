@@ -10,7 +10,7 @@ app = Flask(__name__)
 client = MongoClient()
 db = client.Contractor
 nail_polishes = db.nail_polishes
-cart = db.cart
+reviews = db.reviews
 
 @app.route('/')
 def products_index():
@@ -18,7 +18,6 @@ def products_index():
     r = requests.get("http://makeup-api.herokuapp.com/api/v1/products.json?product_type=nail_polish")
 
     json_data = r.json()
-    print('count', nail_polishes.count({}))
     if nail_polishes.count({}) == 0:
         for nail_polish in json_data:
             nail_polishes.insert_one(nail_polish)
@@ -40,3 +39,15 @@ def products_show(product_id):
         colors.append([rgb, color["colour_name"]])
     return render_template('products_show.html', nail_polish=nail_polish, colors=colors)
 
+# @app.route('/products/reviews', methods=['POST'])
+# def reviews_new():
+#     """Submit a new comment."""
+#     return 'review here'
+    # review = {
+    #     'title': request.form.get('title'),
+    #     'content': request.form.get('content'),
+    #     'nail_polish_id': ObjectId(request.form.get('nail_polish_id'))
+    # }
+    # print(review)
+    # review_id = reviews.insert_one(review).inserted_id
+    # return redirect(url_for('products_show', product_id=request.form.get('nail_polish_id')))
