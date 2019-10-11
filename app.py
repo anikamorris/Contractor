@@ -25,7 +25,7 @@ def products_index():
     # turn the request into json data
     json_data = r.json()
     # only insert products into the database if it's empty
-    if nail_polishes.count({}) == 0:
+    if nail_polishes.count_documents({}) == 0:
         for nail_polish in json_data:
             nail_polishes.insert_one(nail_polish)
 
