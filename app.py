@@ -7,7 +7,8 @@ import json
 
 app = Flask(__name__)
 
-client = MongoClient()
+host = os.environ.get('MONGODB_URI')
+client = MongoClient(host=f'{host}retryWrites=false')
 db = client.Contractor
 nail_polishes = db.nail_polishes
 reviews = db.reviews
