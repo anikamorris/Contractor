@@ -14,7 +14,7 @@ Access http://localhost:5000/ to view the project
 Run `python3 tests.py' to run all tests.
 
 ## Resources
-Flask
+Flask \n
 MongoDB
 Makeup API http://makeup-api.herokuapp.com/
 Extra thanks to Aucoer Ngo, Ricky Ngyuen, and Ben Lafferty
