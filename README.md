@@ -8,6 +8,10 @@ Clone or download this repo, go to the directory where the downloaded file is, t
 ```
 flask run
 ```
+Access http://localhost:5000/ to view the project
+
+## Tests
+Run `python3 tests.py' to run all tests.
 
 ## Resources
 Flask
