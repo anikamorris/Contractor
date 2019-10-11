@@ -11,9 +11,11 @@ flask run
 Access http://localhost:5000/ to view the project
 
 ## Tests
-Run ```
+Run 
+```
 python3 tests.py
-``` to run all tests.
+``` 
+to run all tests.
 
 ## Resources
 Flask  
