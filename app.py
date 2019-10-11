@@ -52,3 +52,6 @@ def products_show(product_id):
     # print(review)
     # review_id = reviews.insert_one(review).inserted_id
     # return redirect(url_for('products_show', product_id=request.form.get('nail_polish_id')))
+
+if __name__ == '__main__':
+    app.run(debug=True, host='0.0.0.0', port=os.environ.get('PORT', 5002))
