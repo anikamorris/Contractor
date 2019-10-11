@@ -5,19 +5,22 @@
     <a href='/'>Back</a>
 
     <div class='image'>
+        <!-- load product image -->
         <img src={{nail_polish.image_link}} class="img-fluid" alt="Responsive image">
     </div>
-    <div class="words">
-        <h2>{{ nail_polish.name }}</h2>
-        <h2>{{ nail_polish.brand }}</h2>
-        <h4>{{ nail_polish.description }}</h4>
-    </div>
+    <!-- get nail polish name, brand, and description -->
+    <h2>{{ nail_polish.name }}</h2>
+    <h2>{{ nail_polish.brand }}</h2>
+    <h4>{{ nail_polish.description }}</h4>
 
+    <!-- loop through colors list -->
     {% for color in colors %}
     <div class="row" style="width: 100px; height: 100px;">
+        <!-- show color swatch -->
         <svg width="50" height="50">
             <rect width="50" height="50" style="fill: rgb{{ color[0] }}; stroke-width:3; stroke: rgb{{color[0]}}" />
         </svg>
+        <!-- show color name -->
         <h5>{{ color[1] }}</h5>
     </div>
     {% endfor %}

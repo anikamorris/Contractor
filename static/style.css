@@ -1,19 +1,23 @@
 .row {
+    /* display as grid */
     display: inline-block;
     margin: 4%;
     justify-content: center;
 }
 
 h5 {
+    /* ensure heights are equal */
     height: 38px;
     white-space: nowrap;
 }
 
 svg {
+    /* rectangle is at top of div */
     top: 0px;
 }
 
 .nail_polish {
+    /* all nail polishes display as equal size in grid */
     display: inline-block;
     height: 300px;
     width: 315px;
