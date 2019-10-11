@@ -1,0 +1,22 @@
+.row {
+    display: inline-block;
+    margin: 4%;
+    justify-content: center;
+}
+
+h5 {
+    height: 38px;
+    white-space: nowrap;
+}
+
+svg {
+    top: 0px;
+}
+
+.nail_polish {
+    display: inline-block;
+    height: 300px;
+    width: 315px;
+    margin: 30px;
+    margin-top: 50px;
+}

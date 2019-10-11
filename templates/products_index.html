@@ -2,9 +2,15 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
-    {% for nail_polish in nail_polishes %}
-        <h2><a href="products/{{ nail_polish._id }}">{{ nail_polish.name}}</a></h2>
-    {% endfor %}
-
+    <div class="d-flex justify-content-center">
+        {% for nail_polish in nail_polishes %}
+            <div class='nail_polish'>
+                <div class='image'>
+                    <a href="products/{{ nail_polish._id }}"><img src={{nail_polish.image_link}} class="img-fluid" alt="Responsive image"></a>
+                </div>
+                <h2><a href="products/{{ nail_polish._id }}">{{ nail_polish.name}}</a></h2>
+                <h4><a href="products/{{ nail_polish._id }}">{{ nail_polish.brand}} ${{ nail_polish.price|int|string }}</a></h4>
+            </div>
+        {% endfor %}
+    </div>
 {% endblock %}
